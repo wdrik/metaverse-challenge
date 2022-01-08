@@ -7,8 +7,6 @@ import Login from '../components/Login';
 export default function Home() {
   const { isAuthenticated, user, logout } = useMoralis();
 
-  console.log(user);
-
   if (!isAuthenticated) return <Login />;
 
   return (
@@ -21,8 +19,6 @@ export default function Home() {
       <div className="max-w-screen-2xl mx-auto">
         <Header />
       </div>
-
-      <button onClick={logout}>Logout</button>
     </div>
   );
 }
